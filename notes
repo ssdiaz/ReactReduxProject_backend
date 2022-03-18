@@ -37,3 +37,14 @@ NOTE: things to do to build up Rails:
     - folders to for api/v1 controllers
 - CORS gem and uncomment code so it can run on your frontend server
 - rake db:drop will reset datbase
+
+
+
+LEAVING OFF 3/18
+- RAILS:
+    - routes may need to be amended
+    - controllers!
+    - get shell of react going
+    - serializers 
+        - only send cerrtain data to the front end
+        - used to send relationships (which I'm not currently using)
