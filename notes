@@ -1,0 +1,39 @@
+rails g resource Attendee name:string phone:string status:string
+notes:string relationship:string lodgingBudget:float eventsBudget:float --no-test-framework
+    => migration, model, controller, routes
+
+Attendee
+*   name          :string
+*   phone         :string 
+    status        :string     [Confirmed, Maybe, Not Coming]
+    notes         :string
+*   relationship  :string     [Bride, Bridesmaid, Maid of Honor, Matron of Honor, Attendee] .. NOTE: type is a reserved word
+    lodgingBudget :  float
+    eventsBudget  :  float
+    
+
+
+rails g resource Activity name:string description:string cost:float
+mandatory:boolean priority:string include:boolean comment:string day:string time:string --no-test-framework
+    => migration, model, controller, routes
+
+Activity
+*   name        :string
+    description :string
+*   cost        :   float
+    mandatory   :   boolean
+    priority    :string     [high, medium, low]     
+    includeInTotal     :   boolean
+    comment     :string
+    day         :string
+    time        :string
+
+
+NOTE: things to do to build up Rails:
+- Namespace - Routes & Controllers
+    - # fetch('http://localhost:3000/api/v1/attendees')
+    - # fetch('http://localhost:3000/api/v1/activities')
+    - class Api::V1::AttendeesController < ApplicationController    end
+    - folders to for api/v1 controllers
+- CORS gem and uncomment code so it can run on your frontend server
+- rake db:drop will reset datbase

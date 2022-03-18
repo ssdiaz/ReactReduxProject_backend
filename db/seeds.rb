@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# me = Attendee.create(name:"Sam", phone:"1111111111", status:"Confirmed", relationship:"Maid of Honor", lodgingBudget: nil, eventsBudget: nil)
+# flight = Activity.create(name: "Flight", description: "", cost: 500.00, mandatory: true, priority: "HIGH", includeInTotal: true, comment: "", day: "Thursday, Saturday", time: "") 
