@@ -1,7 +1,11 @@
-# README
+# React Redux Project
+## Bachelorette Planner (Backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This the backend setup using Rails API for the bach_planner_frontend, found in GitHub Repo: https://github.com/ssdiaz/ReactReduxProject
+
+
+
+
 
 Things you may want to cover:
 

@@ -42,9 +42,10 @@ NOTE: things to do to build up Rails:
 
 LEAVING OFF 3/18
 - RAILS:
-    - routes may need to be amended
-    - controllers!
-    - get shell of react going
-    - serializers 
+    [X] routes may need to be amended => NO; not using relationships so don't need serializers
+    [] controllers! --- need to be checked I think - in terms of create & delete
+    [] get shell of react going
+- NOTES:
+    [X] serializers 
         - only send cerrtain data to the front end
         - used to send relationships (which I'm not currently using)
