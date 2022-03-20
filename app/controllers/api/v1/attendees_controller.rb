@@ -12,6 +12,8 @@ class Api::V1::AttendeesController < ApplicationController
     end
 
     def create
+        # binding.pry
+
         attendee = Attendee.new(attendee_params)
         if attendee.save
             render json: attendee
