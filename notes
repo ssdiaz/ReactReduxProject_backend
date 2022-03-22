@@ -63,6 +63,7 @@ LEAVING OFF 3/18
     [] controllers! --- need to be checked I think - in terms of create & delete
     [] get shell of react going
 - NOTES:
-    [X] serializers 
+    [] serializers [[Video 3 @ min 22]]
         - only send cerrtain data to the front end
         - used to send relationships (which I'm not currently using)
+rails g serializer Trip
