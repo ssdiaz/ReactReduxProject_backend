@@ -16,7 +16,7 @@ class Api::V1::ActivitiesController < ApplicationController
             if activity.save
                 render json: activity
             else
-                render jason: {error: 'Error in creating activity. Please check fields.'}
+                render json: {error: 'Error in creating activity. Please check fields.'}
             end
         end
     
@@ -24,6 +24,8 @@ class Api::V1::ActivitiesController < ApplicationController
         def destroy
             activity = Activity.find(params[:id])
             activity.destroy
+
+            render json: activity
         end
     
     

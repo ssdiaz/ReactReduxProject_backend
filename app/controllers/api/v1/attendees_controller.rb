@@ -18,7 +18,18 @@ class Api::V1::AttendeesController < ApplicationController
         if attendee.save
             render json: attendee
         else
-            render jason: {error: 'Error in creating attendee. Please check fields.'}
+            render json: {error: 'Error in creating attendee. Please check fields.'}
+        end
+    end
+
+    def update
+        attendee = Attendee.find(params[:id])
+
+        attendee.update(attendee_params)
+        if attendee.save
+            render json: attendee
+        else
+            render json: {error: 'Error in editing attendee. Please check fields.'}
         end
     end
 
@@ -26,6 +37,8 @@ class Api::V1::AttendeesController < ApplicationController
     def destroy
         attendee = Attendee.find(params[:id])
         attendee.destroy
+
+        render json: attendee
     end
 
 
