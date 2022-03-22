@@ -1,4 +1,6 @@
 class Attendee < ApplicationRecord
+    belongs_to :trip
+
     validates_presence_of :name, :phone, :relationship
    
     validates :phone, numericality: { only_integer: true }, length: { is: 10 }

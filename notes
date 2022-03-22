@@ -40,6 +40,23 @@ NOTE: things to do to build up Rails:
 
 
 
+rails g resource Trip location:string start_date:date end_date:date --no-test-framework
+Running via Spring preloader in process 96791
+      invoke  active_record
+      create    db/migrate/20220322161907_create_trips.rb
+      create    app/models/trip.rb
+      invoke  controller
+      create    app/controllers/trips_controller.rb
+      invoke  resource_route
+       route    resources :trips
+
+rails g migration add_tripid_to_attendees trip_id:integer
+rails g migration add_tripid_to_activities trip_id:integer
+
+
+
+
+
 LEAVING OFF 3/18
 - RAILS:
     [X] routes may need to be amended => NO; not using relationships so don't need serializers

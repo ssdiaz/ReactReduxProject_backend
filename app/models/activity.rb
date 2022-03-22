@@ -1,4 +1,6 @@
 class Activity < ApplicationRecord
+    belongs_to :trip
+    
     validates_presence_of :name, :cost
     validates :cost, numericality: true
 
