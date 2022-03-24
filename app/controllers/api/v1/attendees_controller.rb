@@ -24,7 +24,8 @@ class Api::V1::AttendeesController < ApplicationController
         if attendee.save
             @trip.assign_bride(attendee)
             #@trip.save
-            render json: attendee
+            render json: @trip
+            # render json: attendee #MADE THE CHANGE HERE!
         else
             render json: {error: 'Error in creating attendee. Please check fields.'}
         end
