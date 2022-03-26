@@ -10,7 +10,10 @@ class Api::V1::AttendeesController < ApplicationController
     end
 
     def show
-        attendee = @trip.attendees.find_by(id: params[:id])
+        attendee = @trip.attendees.find_by(id: params[:id]) || @trip.attendees.find_by(name: params[:name])
+        # attendee = @trip.attendees.find_by(name: params[:name])
+
+
         # attendee = Attendee.find(params[:id])
         render json: attendee
         # attendee = Attendee.find(params[:id])
@@ -44,7 +47,8 @@ class Api::V1::AttendeesController < ApplicationController
 
         attendee.update(attendee_params)
         if attendee.save
-            render json: attendee
+            # render json: attendee
+            render json: @trip
         else
             render json: {error: 'Error in editing attendee. Please check fields.'}
         end

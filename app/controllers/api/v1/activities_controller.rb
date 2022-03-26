@@ -20,7 +20,8 @@ class Api::V1::ActivitiesController < ApplicationController
         def create
             activity = @trip.activities.new(activity_params)
             if activity.save
-                render json: activity
+                # render json: activity
+                render json: @trip
             else
                 render json: {error: 'Error in creating activity. Please check fields.'}
             end
@@ -37,7 +38,8 @@ class Api::V1::ActivitiesController < ApplicationController
     
             activity.update(activity_params)
             if activity.save
-                render json: activity
+                # render json: activity
+                render json: @trip
             else
                 render json: {error: 'Error in editing activity. Please check fields.'}
             end

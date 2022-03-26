@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :trips
+  # resources :trips
   namespace :api do
     namespace :v1 do
+      # resources :trips do 
+      #   resources :attendees, :key => :name
+      #   resources :activities     
+      # end
       resources :trips do 
-        resources :attendees
-        resources :activities        
+        resources :attendees, :activities          
       end
     end
   end
