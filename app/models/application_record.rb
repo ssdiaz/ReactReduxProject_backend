@@ -6,4 +6,9 @@ class ApplicationRecord < ActiveRecord::Base
   def titleize_name
     self.name = name.titleize
   end
+
+  def titleize_location
+    self.location = location.titleize
+  end
+
 end
