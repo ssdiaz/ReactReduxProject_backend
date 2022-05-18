@@ -53,8 +53,13 @@ Running via Spring preloader in process 96791
 rails g migration add_tripid_to_attendees trip_id:integer
 rails g migration add_tripid_to_activities trip_id:integer
 
-
-
+To Creating a Trip start_date and end_date:
+    2.6.1 :011 > start_date = Date.parse('2022-08-05')
+    => Fri, 05 Aug 2022 
+    2.6.1 :012 > end_date = Date.parse('2022-08-08')
+    => Mon, 08 Aug 2022 
+    2.6.1 :015 > start_date.class
+    => Date 
 
 
 LEAVING OFF 3/18
